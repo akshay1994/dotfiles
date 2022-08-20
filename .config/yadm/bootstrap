@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Because Git submodule commands cannot operate without a work tree, they must
+# be run from within $HOME (assuming this is the root of your dotfiles)
+cd "$HOME"
+
+echo "Init submodules"
+yadm submodule update --recursive --init
+
+# Install lieer
+pip3 install ./.lieer # Note updating will require: `cd ~/.lieer && git pull && pip3 install .`
+

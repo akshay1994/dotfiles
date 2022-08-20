@@ -1,0 +1,4 @@
+# Untracked files are ignored by default. Adding here
+# so we remember which files are required.
+.mail/lieer/.credentials.gmailieer.json
+.mail/lieer/.api.json

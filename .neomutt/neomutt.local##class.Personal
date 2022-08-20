@@ -1,0 +1,2 @@
+# Notmuch
+set nm_default_uri = "notmuch:///Users/akshay/.mail/lieer/"
