@@ -1,0 +1,38 @@
+# Header cache, to speed things up
+set header_cache="~/.cache/mutt_header_cache"
+set message_cachedir="~/.cache/mutt_message_cache"
+
+# Display
+set sort = "threads"
+set sort_aux = "reverse-last-date-received"
+set date_format = "%Y/%m/%d %I:%M%p"
+hdr_order From Date: From: To: Cc: Subject:
+
+# Customizations
+set abort_key = "<Esc>"
+set crypt_use_gpgme = no # Resolve GPGME errors
+set signature = "~/.neomutt/signature"
+
+# Sendmail
+set editor = "nvim -f +':set textwidth=0'"
+set sendmail = "gmi send -t -C ~/.mail/lieer/"
+set edit_headers = yes
+
+# Notmuch
+set nm_default_uri = "notmuch:///~/.mail/lieer/"
+set hidden_tags = "processed,unread,important,attachment,archive,signed"
+set virtual_spoolfile = yes
+unvirtual-mailboxes "*"
+virtual-mailboxes "Inbox" "notmuch://?query=tag:inbox"
+macro index / "<vfolder-from-query>"
+set query_command = "echo '' && notmuch address from:/%s/"
+bind editor <Tab> complete-query
+bind editor ^T complete
+
+# Sidebar
+set sidebar_width = 25
+set sidebar_format = "%D%?F? [%F]?%* %?N?%N/%S?"
+set sidebar_visible = yes
+set mail_check_stats = yes
+
+
