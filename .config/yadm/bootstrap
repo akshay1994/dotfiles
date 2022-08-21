@@ -8,5 +8,11 @@ echo "Init submodules"
 yadm submodule update --recursive --init
 
 # Install lieer
-pip3 install ./.lieer # Note updating will require: `cd ~/.lieer && git pull && pip3 install .`
+# Note updating will require: `cd ~/.lieer && git pull && pip3 install .`
+pip3 install ./.lieer 
 
+# Bootstrap Vim
+if command -v vim >/dev/null 2>&1; then
+  echo "Bootstraping Vim"
+  vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
+fi
