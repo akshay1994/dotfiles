@@ -35,7 +35,8 @@ set edit_headers = yes
 set hidden_tags = "processed,unread,important,attachment,archive,signed"
 set virtual_spoolfile = yes
 unvirtual-mailboxes "*"
-virtual-mailboxes "Inbox" "notmuch://?query=tag:inbox"
+virtual-mailboxes `python3 ~/.neomutt/gmail_labels.py`
+
 macro index / "<vfolder-from-query>"
 set query_command = "echo '' && notmuch address from:/%s/"
 bind editor <Tab> complete-query

@@ -1,4 +1,5 @@
-set nocompatible
+set relativenumber number
+set hidden
 
 " import custom system local config
 source ~/.config/nvim/custom.vim
@@ -13,6 +14,8 @@ endif
 silent! if plug#begin()
   Plug 'tpope/vim-sensible'
   Plug 'adborden/vim-notmuch-address'
+  Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   call plug#end()
 endif
 
@@ -20,5 +23,9 @@ endif
 " Pasting code can cause issues with ident on, unless we use ":set paste"
 " Can use plugins like "tpope/vim-unimpaired" or
 " "ConradIrwin/vim-bracketed-paste"
-filetype plugin indent on
 syntax on
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+nnoremap <silent> <Leader>/ :BLines<CR>
