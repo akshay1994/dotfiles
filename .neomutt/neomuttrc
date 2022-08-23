@@ -27,9 +27,9 @@ set mail_check = 0                          # minimum time between scans
 set local_date_header = no
 
 # Sendmail
-set editor = "nvim -f +':set textwidth=0'"
 set sendmail = "gmi send -t -C ~/.mail/lieer/"
 set edit_headers = yes
+set text_flowed = yes
 
 # Notmuch
 set hidden_tags = "processed,unread,important,attachment,archive,signed"
