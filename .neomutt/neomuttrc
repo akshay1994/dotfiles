@@ -29,6 +29,7 @@ set local_date_header = no
 # Sendmail
 set sendmail = "gmi send -t -C ~/.mail/lieer/"
 set edit_headers = yes
+set send_charset = "utf-8:us-ascii:iso-8859-1"
 set text_flowed = yes
 
 # Notmuch
@@ -38,7 +39,7 @@ unvirtual-mailboxes "*"
 virtual-mailboxes `python3 ~/.neomutt/gmail_labels.py`
 
 macro index / "<vfolder-from-query>"
-set query_command = "echo '' && notmuch address from:/%s/"
+set query_command = "echo '' && notmuch address /%s/"
 bind editor <Tab> complete-query
 bind editor ^T complete
 
