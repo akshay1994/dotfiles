@@ -1,5 +1,3 @@
-source ~/.neomutt/neomutt.local
-
 set mbox_type = "Maildir"
 set folder = "~/.mail/lieer/"
 set spoolfile = "+"
@@ -123,4 +121,4 @@ macro index aT "<tag-thread><previous-entry>;A" "Archive Thread"
 bind index,pager V noop
 macro index,pager V "<view-attachments><search>text/html<enter><view-mailcap><exit>" "View HTML in Browser"
 
-
+source ~/.neomutt/neomutt.local

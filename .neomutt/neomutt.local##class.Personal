@@ -1,3 +1,14 @@
 # Notmuch
 set hostname = "jaggi.co"
 set nm_default_uri = "notmuch:///Users/akshay/.mail/lieer/"
+
+# Encryption
+set crypt_use_gpgme = yes
+set postpone_encrypt = yes
+set pgp_self_encrypt = yes
+set crypt_autosign = yes
+set crypt_autoencrypt = no
+set crypt_auto_pgp = yes
+set smime_is_default = no
+set pgp_default_key = 0x6850E8DE261E1122
+set smime_default_key = 0x1B388D00
