@@ -4,8 +4,8 @@ set nm_default_uri = "notmuch:///Users/akshay/.mail/lieer/"
 
 # Encryption
 set crypt_use_gpgme = yes
-set postpone_encrypt = yes
-set pgp_self_encrypt = yes
+set postpone_encrypt = no
+set pgp_self_encrypt = no
 set crypt_autosign = yes
 set crypt_autoencrypt = no
 set crypt_auto_pgp = yes
