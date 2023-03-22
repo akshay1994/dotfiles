@@ -1,3 +1,4 @@
 text/html; open %s &; needsterminal; nametemplate=%s.html
-text/html; w3m %s -T text/html; copiousoutput; nametemplate=%s.html
+text/html; w3m -o display_link_number=yes -T text/html %s; copiousoutput; nametemplate=%s.html
 application/*; open %s &; needsterminal;
+image/*; open %s &; needsterminal;
