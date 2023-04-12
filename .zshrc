@@ -70,7 +70,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+ZSH_TMUX_AUTOSTART=true
+plugins=(git vi-mode tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,8 +101,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+if type rg &> /dev/null; then
+	export FZF_DEFAULT_COMMAND='rg --files'
+	export FZF_DEFAULT_OPTS='-m'
+fi
+
+# Source custom configs. Note that this should be the last line in
+# the file so that it can override options in this default config.
 if [ -f ~/.zsh/custom_zshrc ]; then
 	source ~/.zsh/custom_zshrc
 else
 	print "404: ~/.zsh/custom_zshrc not found"
 fi
+
