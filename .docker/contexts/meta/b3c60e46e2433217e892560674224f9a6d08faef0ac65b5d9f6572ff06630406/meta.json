@@ -1,0 +1,1 @@
+{"Name":"digi","Metadata":{"Description":"DigitalOcean"},"Endpoints":{"docker":{"Host":"ssh://root@akshay.jaggi.co:23492","SkipTLSVerify":false}}}
