@@ -1,0 +1,1 @@
+{"Name":"firestones","Metadata":{"Description":"Firestones"},"Endpoints":{"docker":{"Host":"ssh://firestones","SkipTLSVerify":false}}}
