@@ -1,3 +1,4 @@
+set nocompatible
 set relativenumber number
 set hidden
 
@@ -17,8 +18,14 @@ silent! if plug#begin()
   Plug 'adborden/vim-notmuch-address'
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'google/vim-maktaba'
+  Plug 'google/vim-codefmt'
+  Plug 'google/vim-glaive'
   call plug#end()
 endif
+
+call glaive#Install()
+Glaive codefmt plugin[mappings]
 
 " Enable filetype based indent config and syntax highlighting
 " Pasting code can cause issues with ident on, unless we use ":set paste"

@@ -1,3 +1,14 @@
-export PATH=$PATH:/home/akshay/.local/bin/
-alias vim=nvim
-export EDITOR=/usr/bin/nvim
+eval "$(/usr/libexec/path_helper)"
+
+alias vim="nvim"
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+
+export DOCKER_BUILDKIT=1
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/sbin:$PATH"
