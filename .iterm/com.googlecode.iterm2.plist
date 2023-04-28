@@ -8,6 +8,8 @@
 	<dict/>
 	<key>Default Bookmark Guid</key>
 	<string>1AA78010-2EA0-4C91-BCB9-4610536510BE</string>
+	<key>FallbackLCCType</key>
+	<string>en_US.UTF-8</string>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>

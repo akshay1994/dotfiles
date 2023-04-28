@@ -26,7 +26,7 @@ set local_date_header = no
 set auto_tag
 
 # Sendmail
-set sendmail = "gmi send -t -C ~/.mail/lieer/"
+set sendmail = "gmi send -t -C $HOME/.mail/lieer/"
 set edit_headers = yes
 set send_charset = "utf-8:us-ascii:iso-8859-1"
 set text_flowed = yes
